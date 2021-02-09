@@ -11,10 +11,10 @@ public class primaryStackController {
     @FXML
     private StackPane mainPane;
 
+
     @FXML
     private void initialize() {
         System.out.println("Inicjalizacja primaryStackPane");
-        setMenu();
 
     }
 
@@ -30,9 +30,11 @@ public class primaryStackController {
 
             MenuPaneController menuPaneController = fxmlLoader.getController();
             menuPaneController.setPrimaryStackController(this);
+            menuPaneController.setDbLabel();
 
 
             setPane(menuPane);
+
         }
     }
 

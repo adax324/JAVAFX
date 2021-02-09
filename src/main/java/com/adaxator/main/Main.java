@@ -1,5 +1,6 @@
 package com.adaxator.main;
 
+import com.adaxator.controllers.primaryStackController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,6 +18,8 @@ public class Main extends Application {
         loader.setLocation(this.getClass().getResource("/fxmls/primaryStack.fxml"));
 
         StackPane primaryStackPane=loader.load();
+        primaryStackController primaryStackController=loader.getController();
+        primaryStackController.setMenu();
 
         Scene primaryScene=new Scene(primaryStackPane);
         primaryStage.setScene(primaryScene);
