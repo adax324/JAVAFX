@@ -1,5 +1,6 @@
 package com.adaxator.controllers;
 
+import com.adaxator.DbConnector.DbConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -25,13 +26,14 @@ public class RegisterController {
     }
     @FXML
     void actionLogin(){
-        System.out.println(loginField.getCharacters());
-
-
-
     }
     @FXML
     void actionPassword(){
-        System.out.println(passwordField.getCharacters());
+    }
+    @FXML
+    void logInAction(){
+        DbConnector.queryNewUser(loginField,passwordField);
+
+
     }
 }

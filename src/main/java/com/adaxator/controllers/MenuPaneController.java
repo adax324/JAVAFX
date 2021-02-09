@@ -29,10 +29,18 @@ public class MenuPaneController {
         if (connection != null) {
             dbLabel.setText("Uzyskano połączenie z bazą danych");
             dbLabel.setVisible(true);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
         } else {
             dbLabel.setText("Brak połączenia z bazą danych");
             dbLabel.setVisible(true);
         }
+
+
 
 
 
