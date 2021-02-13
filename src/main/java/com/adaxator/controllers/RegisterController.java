@@ -1,12 +1,9 @@
 package com.adaxator.controllers;
 
 import com.adaxator.DbConnector.DbConnector;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import java.beans.EventHandler;
 
 public class RegisterController {
     @FXML
@@ -14,9 +11,9 @@ public class RegisterController {
     @FXML
     PasswordField passwordField;
 
-    primaryStackController primaryStackController;
+    private PrimaryStackController primaryStackController;
 
-    public void setPrimaryStackController(com.adaxator.controllers.primaryStackController primaryStackController) {
+    public void setPrimaryStackController(PrimaryStackController primaryStackController) {
         this.primaryStackController = primaryStackController;
     }
 
@@ -35,5 +32,9 @@ public class RegisterController {
         DbConnector.queryNewUser(loginField,passwordField);
 
 
+    }
+    @FXML
+    private void initialize(){
+        System.out.println("Inicjalizacja RegisterPane");
     }
 }

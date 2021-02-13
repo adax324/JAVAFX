@@ -3,10 +3,7 @@ package com.adaxator.DbConnector;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DbConnector {
     public static Connection connect(){
@@ -37,6 +34,28 @@ public class DbConnector {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+    }
+    public static boolean queryLogIn(TextField textField,PasswordField passwordField){
+        Connection connection=connect();
+        Statement statement=null;
+        try {
+            statement=connection.createStatement();
+            ResultSet resultSet=
+                    statement.executeQuery(String.format
+                            ("select * from users where userName=\"%s\"" +
+                                    "and userpassword=PASSWORD(\"%s\") limit 1",
+                                    textField.getCharacters(),passwordField.getCharacters()));
+           if(resultSet.next()){
+               System.out.println("User Match");
+               return true;
+           }
+
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
 
     }
 

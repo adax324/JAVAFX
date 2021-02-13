@@ -2,12 +2,14 @@ package com.adaxator.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
-public class primaryStackController {
+public class PrimaryStackController {
     @FXML
     private StackPane mainPane;
 
@@ -33,7 +35,7 @@ public class primaryStackController {
             menuPaneController.setDbLabel();
 
 
-            setPane(menuPane);
+            setLayout(menuPane);
 
         }
     }
@@ -44,10 +46,12 @@ public class primaryStackController {
         return fxmlLoader;
     }
 
-    public void setPane(Pane menuPane) {
+    public void setLayout(Node menuPane) {
         mainPane.getChildren().clear();
         mainPane.getChildren().add(menuPane);
     }
+
+
 
 
 }

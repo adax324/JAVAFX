@@ -5,6 +5,7 @@
       <options>
         <option name="appClass" value="com.adaxator.main.Main" />
         <option name="description" value="" />
+        <option name="height" value="768" />
         <option name="htmlPlaceholderId" value="" />
         <option name="icons">
           <JavaFxApplicationIcons>
@@ -14,6 +15,7 @@
         <option name="title" value="Adaxator" />
         <option name="vendor" value="" />
         <option name="version" value="0.1" />
+        <option name="width" value="1024" />
       </options>
     </properties>
     <root id="root">

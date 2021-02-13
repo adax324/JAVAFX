@@ -1,7 +1,6 @@
 package com.adaxator.controllers;
 
 import com.adaxator.DbConnector.DbConnector;
-import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,16 +8,15 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
-import java.net.ConnectException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 public class MenuPaneController {
     @FXML
     private Label dbLabel;
-    private primaryStackController primaryStackController;
+    private PrimaryStackController primaryStackController;
 
-    public void setPrimaryStackController(com.adaxator.controllers.primaryStackController primaryStackController) {
+    public void setPrimaryStackController(PrimaryStackController primaryStackController) {
         this.primaryStackController = primaryStackController;
     }
 
@@ -48,6 +46,20 @@ public class MenuPaneController {
 
     @FXML
     void logInButtonAction() {
+        FXMLLoader fxmlLoader=new FXMLLoader();
+        fxmlLoader.setLocation(this.getClass().getResource("/fxmls/loginPaneV2.fxml"));
+
+        Pane pane=null;
+        try {
+            pane=fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (pane!=null)
+        primaryStackController.setLayout(pane);
+
+        loginPaneController loginPaneController=fxmlLoader.getController();
+        loginPaneController.setprimaryStackController(this.primaryStackController);
 
     }
 
@@ -62,7 +74,7 @@ public class MenuPaneController {
             e.printStackTrace();
         }
         if (pane != null)
-            primaryStackController.setPane(pane);
+            primaryStackController.setLayout(pane);
 
         RegisterController registerController = fxmlLoader.getController();
         registerController.setPrimaryStackController(this.primaryStackController);

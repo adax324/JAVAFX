@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Nowy_Project_JavaFX_Media_Market.jar" size="6703" download="eager" />
+    <jar href="Nowy_Project_JavaFX_Media_Market.jar" size="10052" download="eager" />
   </resources>
   <jfx:javafx-desc  width="600" height="400" main-class="com.adaxator.main.Main"  name="Nowy Project JavaFX Media Market" />
   <update check="background"/>
