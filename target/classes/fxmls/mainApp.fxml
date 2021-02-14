@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.adaxator.controllers.MainAppController">
+   <children>
+      <TextField fx:id="asd" layoutX="179.0" layoutY="28.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="30.0" />
+      <TextField fx:id="asdf" layoutX="179.0" layoutY="235.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="80.0" />
+      <Label fx:id="qwe" layoutX="486.0" layoutY="35.0" text="ok" />
+   </children>
+</AnchorPane>

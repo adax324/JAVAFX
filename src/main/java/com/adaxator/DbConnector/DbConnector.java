@@ -60,6 +60,5 @@ public class DbConnector {
     }
 
     public static void main(String[] args) {
-        connect();
     }
 }

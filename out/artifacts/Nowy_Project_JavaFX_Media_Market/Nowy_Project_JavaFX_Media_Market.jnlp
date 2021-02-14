@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Nowy_Project_JavaFX_Media_Market.jnlp">
   <information>
-    <title>Adaxator</title>
+    <title>Adaxator 0.1</title>
     <vendor>Unknown</vendor>
     <description>Nowy Project JavaFX Media Market</description>
     <offline-allowed/>
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Nowy_Project_JavaFX_Media_Market.jar" size="10052" download="eager" />
+    <jar href="Nowy_Project_JavaFX_Media_Market.jar" size="11097" download="eager" />
+    <jar href="mysql-connector-java-8.0.23.jar" size="2415211" download="eager" />
+    <jar href="protobuf-java-3.11.4.jar" size="1660960" download="eager" />
   </resources>
   <jfx:javafx-desc  width="600" height="400" main-class="com.adaxator.main.Main"  name="Nowy Project JavaFX Media Market" />
   <update check="background"/>

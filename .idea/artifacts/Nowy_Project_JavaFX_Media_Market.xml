@@ -5,22 +5,22 @@
       <options>
         <option name="appClass" value="com.adaxator.main.Main" />
         <option name="description" value="" />
-        <option name="height" value="768" />
         <option name="htmlPlaceholderId" value="" />
         <option name="icons">
           <JavaFxApplicationIcons>
-            <option name="windowsIcon" value="$PROJECT_DIR$/Graphicloads-Flat-Finance-Global.ico" />
+            <option name="windowsIcon" value="$PROJECT_DIR$/idea_light_bulb_icon_181526.ico" />
           </JavaFxApplicationIcons>
         </option>
-        <option name="title" value="Adaxator" />
+        <option name="title" value="Adaxator 0.1" />
         <option name="vendor" value="" />
-        <option name="version" value="0.1" />
-        <option name="width" value="1024" />
+        <option name="version" value="" />
       </options>
     </properties>
     <root id="root">
       <element id="archive" name="Nowy_Project_JavaFX_Media_Market.jar">
         <element id="module-output" name="Nowy Project JavaFX Media Market" />
+        <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.23" />
+        <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
       </element>
     </root>
   </artifact>
